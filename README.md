@@ -38,6 +38,14 @@ It's built with modern web technologies to ensure a seamless experience.
 - Node.js & npm  
 - MongoDB installed locally or cloud instance
 
+  
+##🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first.
+
+
+##⚠️ Note
+This project is for learning/demo purposes only. It is **not production-secure**. Avoid using real credentials or sensitive information.
+
 ### Installation
 
 ```bash
@@ -78,12 +86,6 @@ PORT=5000
 MONGO_URI=your_mongo_connection
 Important: Never push .env files to GitHub. Always add .env to your .gitignore.
 
-🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first.
-
-
-⚠️ Note
-This project is for learning/demo purposes only. It is **not production-secure**. Avoid using real credentials or sensitive information.
 
 
 
