@@ -82,6 +82,8 @@ Important: Never push .env files to GitHub. Always add .env to your .gitignore.
 Pull requests are welcome! For major changes, please open an issue first.
 
 
+⚠️ Note
+This project is for learning/demo purposes only. It is **not production-secure**. Avoid using real credentials or sensitive information.
 
 
 
