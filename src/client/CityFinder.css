@@ -1,0 +1,264 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .city-finder .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .city-finder .header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .city-finder .header nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .city-finder .header nav .active {
+    color: #5c6ac4;
+    font-weight: bold;
+  }
+  
+  .logout-btn {
+    padding: 8px 16px;
+    background-color: #eee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 32px 24px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  main h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .controls input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .filter-btn {
+    padding: 10px 16px;
+    background-color: #5c6ac4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .card-text {
+    padding: 16px;
+  }
+  
+  .card-text h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #222;
+  }
+  
+  .card-text p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 6px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  footer a {
+    color: #5c6ac4;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  /* Responsive Design Additions for City Finder */
+
+/* Tablet and Smaller Desktop Adjustments (max-width: 992px) */
+@media (max-width: 992px) {
+    .city-finder .header {
+        padding: 12px 20px; /* Slightly reduce header padding */
+    }
+
+    .city-finder .header h1 {
+        font-size: 22px; /* Slightly smaller header title */
+    }
+
+    .city-finder .header nav a {
+        margin: 0 10px; /* Adjust navigation link spacing */
+    }
+
+    main {
+        padding: 28px 20px; /* Reduce main section padding */
+    }
+
+    main h2 {
+        font-size: 26px; /* Adjust section heading size */
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Allow slightly smaller cards */
+        gap: 18px; /* Slightly reduce gap */
+    }
+
+    .card img {
+        height: 150px; /* Slightly reduce card image height */
+    }
+
+    .card-text h3 {
+        font-size: 17px; /* Adjust card title font size */
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .city-finder .header {
+        flex-direction: column; /* Stack header items on mobile */
+        align-items: flex-start;
+        padding: 12px 16px;
+    }
+
+    .city-finder .header h1 {
+        margin-bottom: 10px; /* Add space below title when stacked */
+        font-size: 20px;
+    }
+
+    .city-finder .header nav {
+        display: flex;
+        flex-wrap: wrap; /* Allow navigation links to wrap */
+        justify-content: center; /* Center nav links if they wrap */
+        width: 100%; /* Take full width */
+        margin-bottom: 10px; /* Space below nav links */
+    }
+
+    .city-finder .header nav a {
+        margin: 5px 8px; /* Further adjust link spacing for wrapping */
+        font-size: 14px;
+    }
+
+    .logout-btn {
+        width: 100%; /* Make logout button full width */
+        margin-top: 10px; /* Add space above logout button */
+        padding: 10px;
+    }
+
+    main {
+        padding: 24px 16px; /* Further reduce main section padding */
+    }
+
+    main h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .controls {
+        flex-direction: column; /* Stack search input and filter button */
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .controls input {
+        width: 100%; /* Make input full width */
+        padding: 12px;
+    }
+
+    .filter-btn {
+        width: 100%; /* Make filter button full width */
+        padding: 12px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Single column layout for cards on mobile */
+        gap: 16px;
+    }
+
+    .card img {
+        height: 180px; /* Make images a bit taller when cards are single column */
+    }
+
+    .card-text {
+        padding: 14px; /* Reduce card text padding */
+    }
+
+    .card-text h3 {
+        font-size: 17px;
+    }
+
+    .card-text p {
+        font-size: 13px;
+    }
+
+    footer {
+        padding: 18px 16px; /* Adjust footer padding */
+        font-size: 12px;
+    }
+}
+
+/* Very Small Mobile Devices (max-width: 420px) */
+@media (max-width: 420px) {
+    .city-finder .header {
+        padding: 10px 12px;
+    }
+
+    .city-finder .header h1 {
+        font-size: 18px;
+    }
+
+    .city-finder .header nav a {
+        margin: 3px 6px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 20px 12px;
+    }
+}

@@ -1,0 +1,52 @@
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+}
+
+.footer .brand {
+  font-weight: 500;
+  color: #222;
+}
+
+.footer-link {
+  color: #3b5bdb;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+/* Responsive adjustments for the footer */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 10px; /* Reduce vertical and add horizontal padding */
+        font-size: 13px; /* Slightly smaller font size on tablets */
+    }
+
+    .footer-link {
+        margin: 0 3px; /* Reduce margin between links */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px 5px; /* Further reduce padding for small mobiles */
+        font-size: 12px; /* Even smaller font size on mobile */
+    }
+
+    .footer .brand {
+        display: block; /* Make the brand take its own line */
+        margin-bottom: 5px; /* Add space below the brand */
+    }
+
+    .footer-link {
+        display: block; /* Stack links vertically */
+        margin: 5px 0; /* Add vertical margin between stacked links */
+    }
+}

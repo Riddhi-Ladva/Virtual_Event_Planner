@@ -1,0 +1,105 @@
+.payment-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn {
+    width: 30%;
+    padding: 12px;
+    background-color: #5c6ac4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .confirmation-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.confirmation-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 350px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+  
+  btn:disabled {
+    background-color: #b0b0b0;
+  }
+  
+  btn:hover {
+    background-color: #4b59a6;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  /* Responsive Adjustments for Payment Container */
+
+/* Tablet Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .payment-container {
+        margin: 30px auto; /* Adjust margin for tablets */
+        padding: 18px; /* Slightly reduce padding */
+        max-width: 90%; /* Allow container to take more width */
+    }
+
+    .btn {
+        width: 40%; /* Increase button width proportionally */
+        padding: 10px; /* Adjust button padding */
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 22px; /* Adjust heading size */
+    }
+
+    /* Confirmation Popup */
+    .confirmation-content {
+        padding: 25px; /* Reduce padding inside popup */
+        max-width: 300px; /* Reduce max-width for smaller screens */
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .payment-container {
+        margin: 20px 15px; /* Smaller margins for mobile */
+        padding: 15px; /* Further reduce padding */
+        max-width: unset; /* Remove max-width to allow full width usage */
+        width: auto; /* Allow width to be determined by margin */
+    }
+
+    .btn {
+        width: 100%; /* Make button full width on mobile */
+        padding: 12px; /* Ensure good tap target size */
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    /* Confirmation Popup */
+    .confirmation-content {
+        padding: 20px; /* Further reduce padding inside popup */
+        max-width: 85%; /* Allow popup to take more width */
+    }
+}

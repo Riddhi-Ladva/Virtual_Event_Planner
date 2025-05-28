@@ -1,0 +1,378 @@
+/* Profile.css - Polished and Updated Version */
+
+/* General Body and Page Styling */
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font for a modern look */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f2f5; /* Light background for the whole page */
+}
+
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Calculate min-height to fill remaining viewport, assuming Navbar and Footer take up space */
+    min-height: calc(100vh - 120px); /* Adjust 120px based on actual Navbar/Footer height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out; /* Smooth background transition */
+    padding: 30px 20px; /* More vertical padding for larger screens */
+    box-sizing: border-box;
+}
+
+/* Profile Card Container */
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.98); /* Near-opaque white for content clarity */
+    border-radius: 18px; /* Slightly more rounded for a softer look */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+    padding: 45px; /* Increased padding inside the card */
+    width: 100%;
+    max-width: 750px; /* Increased max-width for more content space */
+    text-align: center; /* Default text alignment for elements not in flex */
+    position: relative;
+    animation: fadeIn 0.8s ease-out; /* Smooth fade-in animation */
+    overflow: hidden; /* Ensures content respects border-radius */
+}
+
+/* Fade-in Animation for the Profile Card */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Edit Button - Small and in the Right Corner */
+.edit-btn {
+    position: absolute;
+    top: 15px; /* Distance from the top edge */
+    right: 15px; /* Distance from the right edge */
+    background: none; /* No default background */
+    border: none; /* No default border */
+    font-size: 1.1em; /* Small font size for the emoji/text */
+    padding: 6px 12px; /* Small padding for clickable area */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, color 0.2s ease, background-color 0.2s ease;
+    color: #007bff; /* Accent blue color */
+    border-radius: 6px; /* Slightly rounded corners */
+    background-color: rgba(0, 123, 255, 0.05); /* Very subtle background */
+    z-index: 10; /* Ensures it's above other elements */
+    font-weight: 500; /* Slightly bolder text */
+    display: flex; /* Use flex to center icon/text if needed */
+    align-items: center;
+    gap: 5px; /* Space between icon and text if both are present */
+}
+
+.edit-btn:hover {
+    transform: scale(1.08); /* Slight scale on hover */
+    color: #0056b3; /* Darker blue on hover */
+    background-color: rgba(0, 123, 255, 0.15); /* More visible background on hover */
+}
+
+/* Profile Header Content (Image + Details Side-by-Side) */
+.profile-header-content {
+    display: flex; /* Enables Flexbox for horizontal layout */
+    align-items: center; /* Vertically aligns items in the center */
+    gap: 40px; /* Increased space between image and details */
+    margin-bottom: 35px; /* Space below this section */
+    text-align: left; /* Aligns text content to the left within this block */
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 160px; /* Slightly larger image */
+    height: 160px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Perfect circle */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border: 6px solid #007bff; /* Prominent accent border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for image */
+    flex-shrink: 0; /* Prevents image from shrinking on smaller screens */
+}
+
+/* Container for Profile Text Details */
+.profile-details-text {
+    flex-grow: 1; /* Allows this div to take up available space */
+    min-width: 0; /* Prevents overflow issues with long text */
+}
+
+/* Profile Name */
+.profile-name {
+    font-size: 2.5em; /* Larger, more prominent name */
+    color: #222; /* Darker text for better contrast */
+    margin-bottom: 8px; /* Reduced margin for tighter spacing */
+    font-weight: 700; /* Bold */
+    line-height: 1.2;
+}
+
+/* Profile Contact Details (Email, Phone, Password) */
+.profile-email,
+.profile-phone,
+.profile-password {
+    font-size: 1.15em; /* Slightly larger font for readability */
+    color: #555;
+    margin-bottom: 6px; /* Reduced margin between lines */
+    word-wrap: break-word; /* Ensures long content wraps */
+    line-height: 1.5;
+}
+
+.profile-email strong,
+.profile-phone strong,
+.profile-password strong {
+    color: #333; /* Darker label text */
+    font-weight: 600;
+}
+
+/* Edit Form Styling */
+.edit-form {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 18px; /* More space between input fields */
+    margin-top: 20px;
+    text-align: left; /* Align inputs to the left */
+}
+
+.edit-form input {
+    padding: 14px 18px; /* Increased padding for inputs */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* More rounded input fields */
+    font-size: 1.05em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: calc(100% - 36px); /* Full width minus padding */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.edit-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* More pronounced focus shadow */
+}
+
+/* Save and Cancel Buttons */
+.save-btn,
+.cancel-btn {
+    padding: 14px 30px; /* Larger buttons */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.15em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 15px; /* Space above buttons */
+    font-weight: 600;
+    align-self: center; /* Center buttons within the flex column */
+    width: fit-content; /* Make buttons fit their content */
+    min-width: 150px; /* Ensure a minimum width for consistency */
+}
+
+.save-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+.cancel-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* Past Events Section */
+.past-events {
+    margin-top: 40px; /* More space from above content */
+    border-top: 1px solid #eee; /* Subtle separator line */
+    padding-top: 35px; /* Space below separator */
+    text-align: left; /* Align text to the left */
+}
+
+.past-events h4 {
+    font-size: 1.6em; /* Larger heading */
+    color: #333;
+    margin-bottom: 25px; /* More space below heading */
+    border-bottom: 3px solid #007bff; /* Thicker accent line */
+    display: inline-block; /* Makes border-bottom apply only to text width */
+    padding-bottom: 8px; /* Space between text and line */
+    font-weight: 700;
+}
+
+.past-events ul {
+    list-style: none;
+    padding: 0;
+    max-height: 350px; /* Increased max-height for more events */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding-right: 15px; /* Space for the scrollbar */
+    margin-right: -15px; /* Compensate for padding-right to keep content aligned */
+}
+
+.past-events li {
+    background-color: #fcfcfc; /* Lighter background for list items */
+    border: 1px solid #f0f0f0; /* Softer border */
+    border-radius: 12px; /* More rounded list items */
+    padding: 18px 22px; /* Increased padding */
+    margin-bottom: 18px; /* More space between items */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04); /* Softer shadow */
+    line-height: 1.6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.past-events li:hover {
+    transform: translateY(-5px); /* More pronounced lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover */
+}
+
+.past-events li strong {
+    color: #007bff; /* Accent color for labels */
+    font-weight: 600;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #487ba7; /* A professional blue-gray */
+    color: white;
+    padding: 14px 35px; /* Larger button */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.15em;
+    cursor: pointer;
+    margin-top: 40px; /* More space above */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 600;
+    min-width: 180px; /* Ensure a minimum width */
+}
+
+.logout-btn:hover {
+    background-color: #e82626; /* Changes to a clear red on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(72, 123, 167, 0.3); /* Shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .profile-card {
+        max-width: 650px; /* Adjust max-width for medium screens */
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-page {
+        padding: 20px 15px; /* Reduced padding on smaller screens */
+        min-height: calc(100vh - 100px); /* Adjust min-height */
+    }
+
+    .profile-card {
+        padding: 30px;
+        margin: 0 10px; /* Smaller side margins */
+        max-width: 95%; /* Nearly full width on tablets */
+    }
+
+    .profile-header-content {
+        flex-direction: column; /* Stack image and details vertically */
+        text-align: center; /* Center text when stacked */
+        gap: 25px; /* Space between stacked items */
+        margin-bottom: 30px;
+    }
+
+    .profile-details-text {
+        text-align: center; /* Center text when stacked */
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile-name {
+        font-size: 2em;
+    }
+
+    .profile-email,
+    .profile-phone,
+    .profile-password {
+        font-size: 1.05em;
+    }
+
+    .edit-form input {
+        width: 100%; /* Full width for inputs on smaller screens */
+        padding: 12px 15px;
+    }
+
+    .save-btn,
+    .cancel-btn,
+    .logout-btn {
+        padding: 12px 25px;
+        font-size: 1.05em;
+        min-width: unset; /* Remove min-width on smaller screens */
+        width: 80%; /* Make buttons take more width */
+    }
+
+    .past-events h4 {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .past-events ul {
+        max-height: 250px; /* Adjust scrollable height for smaller screens */
+    }
+
+    .past-events li {
+        padding: 15px 18px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 25px;
+    }
+
+    .edit-btn {
+        font-size: 0.9em; /* Even smaller on very small screens */
+        top: 10px;
+        right: 10px;
+        padding: 4px 8px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-name {
+        font-size: 1.7em;
+    }
+
+    .profile-email,
+    .profile-phone,
+    .profile-password {
+        font-size: 0.95em;
+    }
+
+    .past-events h4 {
+        font-size: 1.3em;
+    }
+
+    .save-btn,
+    .cancel-btn,
+    .logout-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+        width: 90%; /* Even wider on very small screens */
+    }
+}

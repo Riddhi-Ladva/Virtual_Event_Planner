@@ -1,0 +1,174 @@
+.signup-page {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-image 1s ease-in-out;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+  
+  .signup-container {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    opacity: 0.9;
+
+  }
+  
+  .signup-container h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #222;
+  }
+  
+  .signup-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-container input {
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  
+  .signup-container button {
+    background-color: #5c6ac4;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .signup-container button:hover {
+    background-color: #4b59a6;
+  }
+  
+  .signup-container p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .signup-container a {
+    color: #5c6ac4;
+    text-decoration: none;
+  }
+  /* Responsive Adjustments for Signup Page */
+
+/* Tablet Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 30px 25px; /* Reduce padding for smaller screens */
+        max-width: 380px; /* Slightly reduce max-width */
+        margin: 0 20px; /* Add horizontal margin to prevent touching screen edges */
+    }
+
+    .signup-container h2 {
+        font-size: 22px; /* Slightly smaller heading */
+        margin-bottom: 20px;
+    }
+
+    .signup-container input {
+        padding: 10px; /* Reduce input padding */
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .signup-container button {
+        padding: 10px; /* Reduce button padding */
+        font-size: 15px;
+    }
+
+    .signup-container p {
+        font-size: 13px; /* Smaller paragraph text */
+        margin-top: 14px;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .signup-page {
+        align-items: flex-start; /* Align container to top on very small screens */
+        padding-top: 50px; /* Add some space from the top */
+    }
+
+    .signup-container {
+        padding: 25px 20px; /* Further reduce padding */
+        max-width: 90%; /* Allow container to take more width on small screens */
+        margin: 0 auto; /* Center the container */
+        border-radius: 12px; /* Slightly less rounded corners for mobile */
+    }
+
+    .signup-container h2 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .signup-container input {
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .signup-container button {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .signup-container p {
+        font-size: 12px;
+        margin-top: 12px;
+    }
+}
+
+/* Landscape orientation for very small phones (e.g., iPhone SE) */
+@media (max-height: 400px) and (max-width: 768px) and (orientation: landscape) {
+    .signup-page {
+        padding-top: 20px; /* Reduce top padding in landscape to fit content */
+        align-items: center; /* Re-center vertically if space allows */
+    }
+
+    .signup-container {
+        max-width: 80%; /* Allow more width in landscape */
+        padding: 20px 15px; /* Adjust padding */
+    }
+
+    .signup-container h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .signup-container input,
+    .signup-container button {
+        padding: 8px;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .signup-container p {
+        font-size: 11px;
+    }
+}

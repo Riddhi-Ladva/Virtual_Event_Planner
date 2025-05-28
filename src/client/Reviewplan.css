@@ -1,0 +1,497 @@
+.review-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.header nav .active {
+  color: #5c6ac4;
+  font-weight: bold;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main {
+  padding: 32px 24px;
+  max-width: 1200px;
+  margin: auto;
+  flex: 1;
+}
+
+main h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: flex; /* Using flex instead of grid */
+  justify-content: space-between; /* Spacing the cards evenly */
+  gap: 20px; /* Space between the cards */
+  margin-bottom: 24px;
+  flex-wrap: wrap; /* Allow wrapping to next line if needed */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  width: 260px; /* Set width to make all cards same size */
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 16px;
+}
+
+.card-text h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.card-text p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.total-box {
+  background: linear-gradient(135deg, #5c6ac4, #4a55a2); /* Gradient background */
+  border: 2px solid #4a55a2; /* Border with same color as gradient */
+  padding: 30px 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* Subtle shadow */
+  margin-top: 24px;
+}
+
+.total-box h3 {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+}
+
+.total-box p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #fff;
+}
+
+
+.confirm-btn {
+  display: block;
+  margin: 32px auto;
+  padding: 12px 24px;
+  background-color: #5c6ac4;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #4a55a2;
+}
+.review-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* dark translucent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.payment-modal-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 480px;
+  position: relative;
+  animation: fadeInScale 0.3s ease forwards;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.form-value {
+  font-size: 16px;
+  color: #555;
+}
+
+
+footer {
+  text-align: center;
+  padding: 24px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #777;
+}
+/* Responsive Design Additions for Review Page */
+
+/* Tablet and Smaller Desktops (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Header */
+    .header {
+        padding: 12px 20px;
+    }
+
+    .header nav a {
+        margin: 0 10px;
+        font-size: 15px;
+    }
+
+    .logout-btn {
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+
+    /* Main Content */
+    main {
+        padding: 28px 20px;
+    }
+
+    main h2 {
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+
+    /* Grid (Cards) */
+    .grid {
+        gap: 18px;
+        justify-content: center; /* Center cards when they wrap */
+    }
+
+    .card {
+        width: 240px; /* Slightly smaller card width */
+    }
+
+    .card img {
+        height: 150px; /* Adjust image height */
+    }
+
+    .card-text {
+        padding: 14px;
+    }
+
+    .card-text h3 {
+        font-size: 17px;
+    }
+
+    .card-text p {
+        font-size: 13px;
+    }
+
+    /* Total Box */
+    .total-box {
+        padding: 25px 20px;
+        margin-top: 20px;
+    }
+
+    .total-box h3 {
+        font-size: 20px;
+    }
+
+    .total-box p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* Confirm Button */
+    .confirm-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        margin: 28px auto;
+    }
+
+    /* Review Labels */
+    .review-labels {
+        gap: 10px;
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+
+    /* Payment Modal */
+    .payment-modal-content {
+        padding: 25px 30px;
+        max-width: 420px;
+    }
+
+    .close-btn {
+        font-size: 22px;
+    }
+
+    .form-label,
+    .form-value {
+        font-size: 15px;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        flex-direction: column; /* Stack header items */
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .header nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center nav links if they wrap */
+        margin-top: 10px;
+    }
+
+    .header nav a {
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+
+    .logout-btn {
+        width: 100%; /* Make logout button full width */
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    /* Main Content */
+    main {
+        padding: 24px 15px;
+    }
+
+    main h2 {
+        font-size: 24px;
+        text-align: center; /* Center main heading */
+        margin-bottom: 12px;
+    }
+
+    /* Grid (Cards) */
+    .grid {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center stacked cards */
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 90%; /* Make cards nearly full width */
+        max-width: 300px; /* Keep a max-width for better readability */
+    }
+
+    .card img {
+        height: 180px; /* Adjust image height for stacked cards */
+    }
+
+    /* Total Box */
+    .total-box {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .total-box h3 {
+        font-size: 18px;
+    }
+
+    .total-box p {
+        font-size: 16px;
+    }
+
+    /* Confirm Button */
+    .confirm-btn {
+        width: 90%; /* Make button full width */
+        padding: 12px;
+        font-size: 15px;
+        margin: 24px auto;
+    }
+
+    /* Review Labels */
+    .review-labels {
+        gap: 10px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    /* Payment Modal */
+    .payment-modal-content {
+        padding: 20px 25px;
+        width: 95%; /* Allow modal to take more width */
+        max-width: 350px;
+    }
+
+    .form-group {
+        flex-direction: column; /* Stack form labels and values */
+        align-items: flex-start; /* Align stacked items to the left */
+        gap: 4px;
+    }
+
+    .form-label {
+        font-size: 14px;
+        min-width: unset; /* Remove min-width when stacked */
+    }
+
+    .form-value {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 18px 15px;
+        font-size: 13px;
+    }
+}
+
+/* Very Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    .header {
+        padding: 8px 10px;
+    }
+
+    .header nav a {
+        margin: 3px 6px;
+        font-size: 13px;
+    }
+
+    /* Main Content */
+    main {
+        padding: 20px 10px;
+    }
+
+    main h2 {
+        font-size: 22px;
+    }
+
+    /* Cards */
+    .card {
+        width: 100%; /* Ensure full width on very small screens */
+    }
+
+    .card img {
+        height: 160px; /* Adjust image height */
+    }
+
+    /* Total Box */
+    .total-box {
+        padding: 15px;
+    }
+
+    .total-box h3 {
+        font-size: 16px;
+    }
+
+    .total-box p {
+        font-size: 14px;
+    }
+
+    /* Confirm Button */
+    .confirm-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* Review Labels */
+    .review-labels {
+        padding: 0 5px;
+    }
+
+    /* Payment Modal */
+    .payment-modal-content {
+        padding: 15px 20px;
+    }
+
+    .close-btn {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,190 @@
+body {
+    background-image: url('../assets/navbarbg.avif'); /* Replace with your image file path */
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center; /* Centers the image */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 24px;
+    background-color:rgb(246, 246, 246);
+    border-bottom: 0.5px solid #e5e7eb;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: -10px;
+    
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 300px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .brand-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    font-style: #afacad;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #040404;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link.active,
+  .nav-link:hover {
+    color: #000000;
+    font-weight: 600;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .btn {
+    padding: 10px 30px;
+    font-size: 15px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #3730a3;
+    transform: scale(1.03);
+  }
+  
+  .profile-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  /* Responsive Adjustments for Navbar */
+
+/* Tablet and Medium Screens (max-width: 992px) */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 10px 15px; /* Slightly reduce padding */
+    }
+
+    .logo {
+        width: 250px; /* Make logo smaller */
+        height: 75px;
+    }
+
+    .brand-name {
+        font-size: 20px; /* Slightly smaller brand name */
+    }
+
+    .nav-link {
+        font-size: 15px; /* Adjust link font size */
+    }
+
+    .nav-right {
+        gap: 10px; /* Reduce gap on the right */
+    }
+
+    .btn {
+        padding: 8px 20px; /* Reduce button padding */
+        font-size: 14px;
+    }
+
+    .profile-icon {
+        width: 32px; /* Slightly smaller profile icon */
+        height: 32px;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Allow items to wrap to next line */
+        justify-content: center; /* Center items when wrapped */
+        padding: 10px 10px; /* Reduce padding */
+        text-align: center;
+    }
+
+    .nav-left {
+        width: 100%; /* Take full width */
+        justify-content: center; /* Center content within nav-left */
+        margin-bottom: 10px; /* Add space below brand/logo */
+    }
+
+    .logo {
+        width: 200px; /* Further reduce logo size */
+        height: 60px;
+    }
+
+    .brand-name {
+        font-size: 18px; /* Further reduce brand name size */
+        display: none; /* Optionally hide brand name to save space */
+    }
+
+    .nav-link {
+        font-size: 14px; /* Adjust link font size */
+        padding: 5px 8px; /* Add padding to make links easier to tap */
+    }
+
+    .nav-right {
+        width: 100%; /* Take full width */
+        justify-content: center; /* Center buttons/profile icon */
+        gap: 8px;
+        margin-top: 5px; /* Add a bit space above nav-right */
+    }
+
+    .btn {
+        padding: 8px 15px; /* Smaller button for mobile */
+        font-size: 13px;
+    }
+
+    .profile-icon {
+        width: 30px; /* Smallest profile icon */
+        height: 30px;
+    }
+}
+
+/* Very Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 5px;
+    }
+
+    .logo {
+        width: 180px; /* Even smaller logo */
+        height: 50px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        margin: 0 5px; /* Reduce margin between nav links */
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .profile-icon {
+        width: 28px;
+        height: 28px;
+    }
+}

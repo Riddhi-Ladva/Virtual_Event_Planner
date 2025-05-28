@@ -1,0 +1,244 @@
+.menu-selection-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .diet-filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+  
+  .diet-filter button {
+    padding: 0.5rem 1.5rem;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .diet-filter button.active {
+    background-color: #6366f1;
+    color: white;
+  }
+  
+  .menu-category {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .menu-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .menu-content {
+    padding: 1rem;
+  }
+  
+  .menu-footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+  .menu-footer button {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  /* Responsive Adjustments for Menu Selection */
+
+/* Tablet and Medium Screens (max-width: 992px) */
+@media (max-width: 992px) {
+    .menu-selection-container {
+        padding: 1.5rem; /* Reduce overall padding */
+    }
+
+    .diet-filter {
+        flex-wrap: wrap; /* Allow filter buttons to wrap to next line */
+        justify-content: center; /* Center filter buttons when wrapped */
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .diet-filter button {
+        padding: 0.4rem 1.2rem; /* Slightly smaller padding for buttons */
+        font-size: 0.95rem;
+    }
+
+    .menu-category {
+        font-size: 1.4rem; /* Slightly smaller category heading */
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Allow cards to be slightly smaller */
+        gap: 1.2rem; /* Reduce gap between cards */
+    }
+
+    .menu-card img {
+        height: 160px; /* Slightly reduce image height */
+    }
+
+    .menu-content {
+        padding: 0.8rem; /* Reduce padding inside menu card */
+    }
+
+    .menu-footer {
+        margin-top: 0.8rem;
+    }
+
+    .menu-footer button {
+        padding: 0.3rem 0.8rem; /* Smaller add-to-cart button */
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .menu-selection-container {
+        padding: 1rem; /* Further reduce overall padding */
+    }
+
+    .diet-filter {
+        flex-direction: column; /* Stack filter buttons vertically */
+        gap: 0.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .diet-filter button {
+        width: 100%; /* Make buttons take full width when stacked */
+        padding: 0.6rem 1rem; /* Adjust padding for full width */
+        font-size: 1rem;
+    }
+
+    .menu-category {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* Single column layout for menu cards */
+        gap: 1rem;
+    }
+
+    .menu-card img {
+        height: 200px; /* Make images a bit taller when cards are single column */
+    }
+
+    .menu-content {
+        padding: 0.7rem;
+    }
+
+    .navigation-buttons {
+        flex-direction: column; /* Stack navigation buttons vertically */
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .navigation-buttons button {
+        width: 100%; /* Make navigation buttons full width */
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .menu-footer {
+        flex-direction: column; /* Stack price and add button */
+        align-items: flex-start; /* Align stacked items to the left */
+        gap: 0.5rem; /* Space between stacked items */
+        margin-top: 0.7rem;
+    }
+
+    .menu-footer button {
+        width: 100%; /* Make add button full width */
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Very Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .menu-selection-container {
+        padding: 0.8rem;
+    }
+
+    .diet-filter button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .menu-category {
+        font-size: 1.2rem;
+    }
+
+    .menu-card img {
+        height: 180px;
+    }
+
+    .menu-content {
+        padding: 0.6rem;
+    }
+
+    .navigation-buttons button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
