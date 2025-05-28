@@ -39,11 +39,11 @@ It's built with modern web technologies to ensure a seamless experience.
 - MongoDB installed locally or cloud instance
 
   
-##🤝 Contributing
+🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first.
 
 
-##⚠️ Note
+⚠️ Note
 This project is for learning/demo purposes only. It is **not production-secure**. Avoid using real credentials or sensitive information.
 
 ### Installation
